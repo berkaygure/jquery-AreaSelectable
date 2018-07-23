@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery AreaSelectable</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="dist/areaSelectable.min.js"></script>
+
+    <body>
+        <style>
+            html,
+            body {
+                background-color: whitesmoke;
+            }
+
+            hr {
+                background-color: #e4e4e4
+            }
+        </style>
+
+    </body>
+</head>
+
+<body>
+
+    <div class="header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://bulma.io">
+                        <h1>jQuery AreaSelactable</h1>
+                    </a>
+
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="navbar-menu">
+                    <a class="navbar-item" href="#basics">
+                        Basic Usage
+                    </a>
+                    <a class="navbar-item" href="#advanced">
+                        Advanced
+                    </a>
+                    <a class="navbar-item" href="#options">
+                        Options
+                    </a>
+                    <a class="navbar-item" href="#methods">
+                        Methods
+                    </a>
+                    <!-- navbar start, navbar end -->
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="field is-grouped">
+                                <p class="control">
+                                    <a class="button is-primary">
+                                        <span class="icon">
+                                            <i class="fas fa-download" aria-hidden="true"></i>
+                                        </span>
+                                        <span>Download</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <section class="hero is-medium is-light is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <p class="title">
+                    jQuery areaSelectable
+                </p>
+                <p class="subtitle">
+                    A basic extension for select an area on image or other elements.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="main" style="margin-top:20px;">
+            <h1 class="is-size-1" style="margin-bottom: 40px;">Examples: </h1>
+
+            <div class="columns">
+                <div class="column">
+                    <h2 id="basics" class="is-size-4">1. Basic Setup</h2>
+                    <hr/>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>Html:</strong>
+                                        <pre><code class="html">&lt;img id="image" src="your_image.jpg"&gt;</code></pre>
+                                        <strong>Javascript:</strong>
+                                        <pre><code class="javascript">$("#image").areaSelectable();</code></pre>
+                                    </div>
+                                    <div class="column is-4">
+                                        <img id="example1" src="sample-image.jpg" alt="Sample Image">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="advanced" class="is-size-4" style="margin-top: 40px;">2. Advanced Features</h2>
+                    <hr/>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-header-title">Allow multiple</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>Html:</strong>
+                                        <pre><code class="html">&lt;img id="image" src="your_image.jpg"&gt;</code></pre>
+                                        <strong>Javascript:</strong>
+                                        <pre><code class="javascript">$("#image").areaSelectable({ allowMultiple: true });</code></pre>
+                                    </div>
+                                    <div class="column is-4">
+                                        <img id="example2" src="sample-image.jpg" alt="Sample Image">
+                                        <div class="is-clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card" style="margin-top: 20px;">
+                        <div class="card-header">
+                            <h3 class="card-header-title">
+                                Custom area counts
+                            </h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>Html:</strong>
+                                        <pre><code class="html">&lt;img id="image" src="your_image.jpg"&gt;</code></pre>
+                                        <strong>Javascript:</strong>
+                                        <pre><code class="javascript">$("#image").areaSelectable({ allowMultiple: true, x: 5, y: 5 });</code></pre>
+                                    </div>
+                                    <div class="column is-4">
+                                        <img id="example3" src="sample-image.jpg" alt="Sample Image">
+                                        <div class="is-clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card" style="margin-top: 20px;">
+                        <div class="card-header">
+                            <h3 class="card-header-title">
+                                Set areas
+                            </h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>Html:</strong>
+                                        <pre><code class="html">&lt;img id="image" src="your_image.jpg"&gt;</code></pre>
+                                        <strong>Javascript:</strong>
+                                        <pre><code class="javascript">$("#image").areaSelectable('setSelected', [1, 2, 9]);</code></pre>
+                                        <strong>Or:</strong>
+                                        <pre><code class="javascript">$("#image").areaSelectable('setSelected', "1, 2, 9");</code></pre>
+                                    </div>
+                                    <div class="column is-4">
+                                        <img id="example4" src="sample-image.jpg" alt="Sample Image">
+                                        <div class="is-clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h2 id="options" class="is-size-4" style="margin-top: 40px;">3. Options</h2>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>
+                                            Aviable Options
+                                        </strong>
+                                        <pre><code class="javascript">
+areaClass: "area", // class name for areas
+color: "#cd0000", // area color
+opacity: ".6", // Area opacity
+splitOperator: ",",
+x: "2",
+y: "3",
+width: "auto",
+height: "auto",
+createHidden: true, // Creates hidden input
+name: "", // hidden inputs name
+allowMultiple: false, // Allow multiple area select
+// Callbacks
+onAfterSelect: function(status, id) {},
+onBeforeSelect: function(status, id) {},
+onSelected: function(id) {},
+onDeselected: function(id) {}
+                                            </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <h2 id="methods" class="is-size-4" style="margin-top: 40px;">3. Methods</h2>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>
+                                            Set Selected Items
+                                        </strong>
+                                        <pre><code class="javascript">$("#image").areaSelectable('setSelected', [1, 2, 9]);</code></pre>
+                                        <strong>
+                                            Get Selected Items
+                                        </strong>
+                                        <pre><code class="javascript">$("#image").areaSelectable('getSelected');</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+    </div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script>
+        $(document).ready(function () {
+            $('pre code').each(function (i, block) {
+                hljs.highlightBlock(block);
+            });
+
+            $("#example1").areaSelectable();
+            $("#example2").areaSelectable({ allowMultiple: true });
+            $("#example3").areaSelectable({ allowMultiple: true, x: 5, y: 5 });
+            $("#example4").areaSelectable({ allowMultiple: true, x: 5, y: 5 });
+            $("#example4").areaSelectable('setSelected', [1, 2, 9]);
+
+        });
+    </script>
+</body>
+
+</html>

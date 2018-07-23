@@ -1,0 +1,22 @@
+{
+  "name": "areaSelectable",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "Berkay Güre <bgure@hotmail.com.tr>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.4.5",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-command": "^0.4.1"
+  },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  }
+}
