@@ -2,7 +2,7 @@
 
 A basic extension for select an area on image or other elements.
 
-[Demo and documentation](http://berkaygure.com/jquery-Areaselectable)
+[Demo and documentation](https://berkaygure.github.io/jquery-AreaSelectable/)
 
 ## Installation
 
@@ -22,4 +22,4 @@ In jQuery
 })`
 
 ## Options and methods
-You can see full documentation [here](http://berkaygure.com/jquery-Areaselectable).
+You can see full documentation [here](https://berkaygure.github.io/jquery-AreaSelectable/).
